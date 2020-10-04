@@ -4,16 +4,16 @@ import Image from "../Components/Image"
 import {getClass} from "../Utilities/"
 
 
-import {SomeContext} from "../Utilities/someContext"
+import {Context} from "../Utilities/someContext"
 
 const Photos = () => {
 
-    const {photos} = useContext(SomeContext)
+    const {photos} = useContext(Context)
 
     // console.log(photos)
 
     const imageElements = photos.map((photo, index) => (
-         <Image key={photo.id} img={photo} className={getClass(index)} />
+         <Image key={photo.id} img={photo} className={getClass(index)}/>
     ))
 
     return (

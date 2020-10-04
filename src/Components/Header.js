@@ -1,5 +1,5 @@
 import React from 'react'
-import Photos from "../Pages/Photos"
+// import Photos from "../Pages/Photos"
 
 import {Link} from "react-router-dom"
 
