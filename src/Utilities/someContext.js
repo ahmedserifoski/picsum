@@ -41,7 +41,7 @@ const ContextProvider = (props) => {
                 setCartItems(prevItem => prevItem.filter(item => item.id !== id))
                 
             }
-            console.log(cartItems)
+            // console.log(cartItems)
     return (
         <div>
             <Context.Provider value={{photos, toggleFavorite, cartItems, addToCart, removeFromCart}} >
