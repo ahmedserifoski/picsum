@@ -28,10 +28,14 @@ function Image({img, className}) {
     
 
     function cartIcon() {
-        const alreadyInCart = cartItems.some(item => item.id === img.id)
+        
+
+        
+        const alreadyInCart = cartItems.find(item => item.id === img.id)
+        
 
         if(alreadyInCart) {
-            return <i onClick={() => removeFromCart(img)} className="ri-shopping-cart-fill cart"></i>
+            return <i onClick={() => removeFromCart(img.id)} className="ri-shopping-cart-fill cart"></i>
         }else if(hovered) {
             return <i onClick={() => addToCart(img)} className="ri-add-circle-line cart"></i>
         }
