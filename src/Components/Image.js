@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react"
+import React, {useContext} from "react"
 import PropTypes from "prop-types"
 import {Context} from "../Utilities/someContext"
 import useHover from "../hooks/useHover"
@@ -6,17 +6,9 @@ import useHover from "../hooks/useHover"
 
 function Image({img, className}) {
 
-    // const [hovered, setHovered] = useState(false)
     const [hovered, ref] = useHover()
 
     const {toggleFavorite, addToCart, cartItems, removeFromCart} = useContext(Context)
-
-    // const handleEnter = () => {
-    //     setHovered(!hovered)
-    // }
-    // const handleOut = () => {
-    //     setHovered(!hovered)
-    // }
 
     function heartIcon() {
         if(img.isFavorite) {
